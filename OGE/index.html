@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <script src="media/scripts/100vh.js" defer></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /*-------------------------*/
+    
+    header {
+        height: 70px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    img[alt="logo"] {
+        height: 60px;
+    }
+    /*-------------------------*/
+    
+    main {
+        height: calc(100vh - 140px);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #card {
+        background-color: #000;
+    }
+    /*-------------------------*/
+    
+    footer {
+        height: 70px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    footer img {
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+    
+    footer a {
+        display: block;
+    }
+    
+    footer a:not(:nth-child(4)) {
+        margin-right: 20px;
+    }
+    /*-------------------------*/
+    
+    @media screen and (min-width: 993px) and (pointer:fine) {
+        /*-------------------------*/
+        #card {
+            width: calc((100vh - 140px)*4/3);
+            height: calc((100vh - 140px)*2/3);
+        }
+        /*-------------------------*/
+        footer a {
+            transition-duration: 0.5s;
+        }
+        footer a:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        /*-------------------------*/
+        #card {
+            width: calc((100vh - 140px)*4/9);
+            height: calc((100vh - 140px)*2/3);
+        }
+        /*-------------------------*/
+    }
+</style>
+
+<body>
+    <header><img src="media/images/logo.png" alt="logo"></header>
+    <main id="content">
+        <div id="card"></div>
+    </main>
+    <footer>
+        <a href="https://vk.com/m.poltorako" target="_blank"><img src="media/images/socialNetworks/vk.svg" alt="vk"></a>
+        <a href="https://www.facebook.com/people/%D0%9C%D0%B0%D0%BA%D0%B0%D1%80-%D0%9F%D0%BE%D0%BB%D1%82%D0%BE%D1%80%D0%B0%D0%BA%D0%BE/100024687576252" target="_blank"><img src="media/images/socialNetworks/facebook.svg" alt="facebook"></a>
+        <a href="https://twitter.com/ynhbCDZxh9b8cRv" target="_blank"><img src="media/images/socialNetworks/twitter.svg" alt="twitter"></a>
+        <a href="https://www.youtube.com/channel/UC3E3XY_iqMt7tMPykVgTu2g" target="_blank"><img src="media/images/socialNetworks/youtube.svg" alt="youtube"></a>
+    </footer>
+</body>
+
+</html>

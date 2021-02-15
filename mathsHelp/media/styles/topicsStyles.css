@@ -1,0 +1,116 @@
+	body {
+	    display: flex;
+	    flex-direction: column;
+	    min-height: 100vh;
+	}
+	
+	main {
+	    flex: 1;
+	}
+	
+	#content h1 {
+	    font-family: 'Oswald', sans-serif;
+	    font-size: 50px;
+	    text-align: center;
+	    padding-top: 35px;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	
+	.topic {
+	    padding-bottom: 45px;
+	}
+	
+	.firstTopic {
+	    padding-top: 45px;
+	}
+	
+	.subtheme,
+	.firstSubtheme {
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    display: block;
+	    min-height: 64px;
+	    border: 3px solid #151515;
+	    border-top: none;
+	    border-left: 10px solid #151515;
+	    margin-left: 30px;
+	}
+	
+	.subtheme {
+	    color: #000000;
+	}
+	
+	.firstSubtheme {
+	    border-top: 3px solid #151515;
+	    border-left: 3px solid #151515;
+	    margin-left: 0px;
+	    background-color: #151515;
+	}
+	
+	.subthemeText {
+	    padding-left: 10px;
+	}
+	
+	.firstSubthemeText {
+	    padding-left: 10px;
+	    color: #FFFFFF;
+	}
+	
+	.topic {
+	    font-family: 'Oswald', sans-serif;
+	    font-size: 38px;
+	}
+	
+	@media screen and (min-width: 993px) and (hover) {
+	    .subtheme {
+	        position: relative;
+	        overflow: hidden;
+	        -webkit-transition: color 0.5s;
+	        -o-transition: color 0.5s;
+	        transition: color 0.5s;
+	        -webkit-transition-timing-function: linear;
+	        -o-transition-timing-function: linear;
+	        transition-timing-function: linear;
+	    }
+	    .subtheme:before {
+	        content: '';
+	        position: absolute;
+	        top: 0;
+	        left: -100%;
+	        width: 200%;
+	        height: 100%;
+	        background: -webkit-gradient(linear, left top, right top, from(rgb(21, 21, 21)), color-stop(50%, rgb(21, 21, 21)), color-stop(50%, rgb(255, 255, 255)), to(rgb(255, 255, 255)));
+	        background: -webkit-linear-gradient(left, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+	        background: -o-linear-gradient(left, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+	        background: linear-gradient(to right, rgb(21, 21, 21) 0%, rgb(21, 21, 21) 50%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 100%);
+	        -webkit-transition: left 0.5s;
+	        -o-transition: left 0.5s;
+	        transition: left 0.5s;
+	        -webkit-transition-timing-function: linear;
+	        -o-transition-timing-function: linear;
+	        transition-timing-function: linear;
+	    }
+	    .subtheme:hover:before {
+	        left: 0;
+	    }
+	    .subtheme:hover {
+	        color: #FFFFFF;
+	    }
+	    .subthemeText {
+	        position: relative;
+	    }
+	}
+	
+	@media screen and (max-width: 1032px) {
+	    .topic {
+	        margin-left: 20px;
+	        margin-right: 20px;
+	    }
+	}
+	
+	@media screen and (max-width: 430px) {
+	    #content h1 {
+	        font-size: 40px;
+	    }
+	}

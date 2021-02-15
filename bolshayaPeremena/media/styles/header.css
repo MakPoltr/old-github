@@ -1,0 +1,105 @@
+@keyframes navigationMovesToTheTop {
+    0% {
+        background-position: center center;
+    }
+    100% {
+        background-position: center -151%;
+    }
+}
+
+@keyframes navigationMovesToTheBottom {
+    0% {
+        background-position: center -151%;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+header {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    width: 66.96vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nonClickableNavigation {
+    pointer-events: none;
+}
+
+.navigation div {
+    height: 75vh;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-origin: content-box;
+    background-size: 100% auto;
+    cursor: pointer;
+    transition: background-position 0.5s;
+    transform: translateZ(0);
+}
+
+.navigation div:hover {
+    background-position: left bottom;
+}
+
+.navigationWho {
+    padding-left: 7.5vh;
+    background-image: url(../images/navigation_who.svg);
+    background-position: right center;
+}
+
+.navigationWhy {
+    padding-right: 7.5vh;
+    background-image: url(../images/navigation_why.svg);
+    background-position: left center;
+}
+
+.navigation .navigationMovesToTheTop {
+    height: 100vh;
+    animation-name: navigationMovesToTheTop;
+    animation-duration: 0.75s;
+    background-position: center -151%;
+}
+
+.navigation .navigationMovesToTheBottom {
+    height: 100vh;
+    animation-name: navigationMovesToTheBottom;
+    animation-duration: 0.75s;
+}
+
+.headerCube {
+    height: 36vh;
+    width: calc((100% - 66.96vh)/2);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center center;
+    transition-property: background-position;
+    transition-duration: 0.75s;
+}
+
+.blueCube {
+    padding-left: 7.5vh;
+    background-image: url(../images/blue_cube.svg);
+}
+
+.redCube {
+    padding-right: 7.5vh;
+    background-image: url(../images/red_cube.svg);
+}
+
+.blueCubeToTheLeft {
+    background-position: calc(-100% - 38.7vh) center;
+}
+
+.redCubeToTheRight {
+    background-position: calc(100% + 38.7vh) center;
+}

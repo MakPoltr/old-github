@@ -1,0 +1,139 @@
+	body {
+	    display: flex;
+	    flex-direction: column;
+	    min-height: 100vh;
+	}
+	
+	main {
+	    flex: 1;
+	}
+	
+	#content {
+	    padding-bottom: 40px;
+	}
+	
+	.itemsLink {
+	    display: block;
+	    margin-top: 40px;
+	}
+	
+	.firstBlockInItems {
+	    padding-top: 15px;
+	    background-color: #151515;
+	    width: 248px;
+	    height: 171px;
+	}
+	
+	.firstBlockInItems div {
+	    background-color: #FFFFFF;
+	    border-radius: 50%;
+	    height: 125px;
+	    width: 125px;
+	    margin: 0 auto;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+	
+	.firstBlockInItems div img {
+	    height: 87px;
+	}
+	
+	.items p {
+	    font-family: 'Oswald', sans-serif;
+	}
+	
+	.firstBlockInItems p {
+	    color: #FFFFFF;
+	    text-align: center;
+	    font-size: 31px;
+	}
+	
+	@media screen and (max-width: 992px) {
+	    .secondBlockInItems {
+	        display: none;
+	    }
+	    #content {
+	        display: flex;
+	        flex-flow: column;
+	    }
+	    .itemsLink {
+	        margin: 0 auto;
+	        margin-top: 40px;
+	    }
+	    @media screen and (min-width: 541px) {
+	        .firstBlockInItems {
+	            width: 372px;
+	            height: 256.5px;
+	        }
+	        .firstBlockInItems div {
+	            height: 187.5px;
+	            width: 187.5px;
+	        }
+	        .firstBlockInItems div img {
+	            height: 130.5px;
+	        }
+	        .firstBlockInItems p {
+	            font-size: 46px;
+	        }
+	        @media screen and (max-width: 744px) {
+	            .itemsLink {
+	                width: 372px;
+	            }
+	        }
+	        @media screen and (min-width: 744px) {
+	            .itemsLink {
+	                width: 558px;
+	            }
+	            .firstBlockInItems {
+	                width: 558px;
+	            }
+	        }
+	    }
+	    @media screen and (max-width: 541px) {
+	        .itemsLink {
+	            width: 248px;
+	        }
+	    }
+	}
+	
+	@media screen and (min-width: 993px) {
+	    .items {
+	        height: 186px;
+	        width: 992px;
+	        display: flex;
+	        align-items: center;
+	    }
+	    .secondBlockInItems {
+	        width: 729px;
+	        margin-left: 15px;
+	    }
+	    .secondBlockInItems p {
+	        font-size: 20px;
+	        color: #000000;
+	    }
+	    @media (hover) {
+	        .items:hover {
+	            transition-duration: 500ms;
+	            transform: scale(1.01);
+	        }
+	        .items:not(:hover) {
+	            transition-duration: 500ms;
+	            transform: scale(1);
+	        }
+	    }
+	    @media screen and (max-width: 1032px) {
+	        .items {
+	            width: 952px;
+	        }
+	        .itemsLink {
+	            margin-left: 20px;
+	        }
+	        .firstBlockInItems {
+	            width: 238px;
+	        }
+	        .secondBlockInItems {
+	            width: 699px;
+	        }
+	    }
+	}

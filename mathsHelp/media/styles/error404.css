@@ -1,0 +1,124 @@
+	#cube404 {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		-webkit-perspective: 600px;
+		perspective: 600px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		margin: 40px auto;
+	}
+	
+	#cube {
+		width: inherit;
+		height: inherit;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-animation-name: cube;
+		animation-name: cube;
+		-webkit-animation-duration: 5s;
+		animation-duration: 5s;
+		-webkit-animation-iteration-count: infinite;
+		animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-timing-function: linear;
+	}
+	
+	.side {
+		position: absolute;
+		width: inherit;
+		height: inherit;
+		font: normal 200px "Oswald";
+		text-align: center;
+		line-height: 300px;
+		color: #fff;
+		background-color: #151515;
+	}
+	
+	.front {
+		-webkit-transform: translateZ(150px);
+		transform: translateZ(150px);
+	}
+	
+	.back {
+		-webkit-transform: rotateY(180deg) translateZ(150px);
+		transform: rotateY(180deg) translateZ(150px);
+	}
+	
+	.right {
+		-webkit-transform: rotateY(90deg) translateZ(150px);
+		transform: rotateY(90deg) translateZ(150px);
+	}
+	
+	.left {
+		-webkit-transform: rotateY(-90deg) translateZ(150px);
+		transform: rotateY(-90deg) translateZ(150px);
+	}
+	
+	#content h1 {
+		font-family: "Oswald";
+		text-align: center;
+		font-size: 70px;
+	}
+	
+	@-webkit-keyframes cube {
+		from {
+			-webkit-transform: rotateY(0);
+			transform: rotateY(0);
+		}
+		to {
+			-webkit-transform: rotateY(-360deg);
+			transform: rotateY(-360deg);
+		}
+	}
+	
+	@keyframes cube {
+		from {
+			-webkit-transform: rotateY(0);
+			transform: rotateY(0);
+		}
+		to {
+			-webkit-transform: rotateY(-360deg);
+			transform: rotateY(-360deg);
+		}
+	}
+	
+	@media screen and (max-width: 767px) {
+		#cube404 {
+			width: 180px;
+			height: 180px;
+			-webkit-perspective: 360px;
+			perspective: 360px;
+			margin: 32px auto;
+		}
+		.side {
+			line-height: 180px;
+			font: normal 120px "Oswald";
+		}
+		.front {
+			-webkit-transform: translateZ(90px);
+			transform: translateZ(90px);
+		}
+		.back {
+			-webkit-transform: rotateY(180deg) translateZ(90px);
+			transform: rotateY(180deg) translateZ(90px);
+		}
+		.right {
+			-webkit-transform: rotateY(90deg) translateZ(90px);
+			transform: rotateY(90deg) translateZ(90px);
+		}
+		.left {
+			-webkit-transform: rotateY(-90deg) translateZ(90px);
+			transform: rotateY(-90deg) translateZ(90px);
+		}
+		#content h1 {
+			font-family: "Oswald";
+			text-align: center;
+			font-size: 35px;
+		}
+		@media screen and (max-width: 319px) {
+			#content h1 {
+				font-size: 30px;
+			}
+		}
+	}

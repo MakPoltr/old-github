@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Выбор локации геокэшингово квеста</title>
+    <link rel="stylesheet" href="media/styles/choiceLocation.css">
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="media/scripts/choiceLocation.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP4XGGjVK__TY2mhfgKZuY0tbpXUrkoME&map_ids=7798f8350d2ff296&callback=initMap" defer>
+    </script>
+</head>
+
+<body>
+    <div class="arjs-loader">
+        <img src="media/images/instruction.svg" alt="Инструкция по использованию AR">
+    </div>
+    <a href="index.html" class="indexPageBackButton"></a>
+    <div class="questMapOpenButton"></div>
+    <div class="controlMenu">
+        <div class="previousQuestButton"></div>
+        <a href="quest.html" class="questSelectionButton"></a>
+        <div class="nextQuestButton"></div>
+    </div>
+    <div class="mapContainer">
+        <div id="map"></div>
+        <div class="hideMapButton"></div>
+    </div>
+    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <a-assets>
+            <a-asset-item id="marker-border-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/border/border.glb"></a-asset-item>
+            <a-asset-item id="1-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/one.glb"></a-asset-item>
+            <a-asset-item id="2-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/two.glb"></a-asset-item>
+            <a-asset-item id="3-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/three.glb"></a-asset-item>
+            <a-asset-item id="4-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/four.glb"></a-asset-item>
+            <a-asset-item id="5-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/five.glb"></a-asset-item>
+            <a-asset-item id="6-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/numeral/six.glb"></a-asset-item>
+            <img id="monument-pavshino-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/monument_pavshino.jpg">
+            <img id="air-defense-memorial-complex-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/air_defense_memorial_complex.jpg">
+            <img id="quenchless-flame-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/quenchless_flame.jpg">
+            <img id="museum-german-anti-fascists-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/museum_german_anti-fascists.jpg">
+            <img id="stele-secondary-school-1-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/stele_secondary_school_1.jpg">
+            <img id="monument-frontline-cameraman-jpg" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/images/background%20selection%20quest/monument_frontline_cameraman.jpg">
+        </a-assets>
+        <a-nft type="nft" url="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/NFT%20markers/selection%20marker/marker" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5">
+            <a-entity gltf-model='#marker-border-glb' scale="125 125 125" position="125 0 -275">
+                <a-entity gltf-model='#1-glb' scale="2 2 2" position="-0.5 0 0.5" id="questNumberModel"></a-entity>
+                <a-image src="#monument-pavshino-jpg" width="1" height="1" rotation="270 0 0" scale="2 2 1" id="imagesInQuestFrame"></a-image>
+            </a-entity>
+        </a-nft>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body></html>

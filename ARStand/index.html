@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARStand</title>
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="media/styles/loader.css">
+    <!-- Подключение скриптов -->
+    <script src="media/assets/jQuery/jquery.min.js" defer></script>
+    <script src="media/assets/vide/vide.min.js" defer></script>
+    <script src="media/scripts/100vh.js" defer></script>
+    <script src="media/scripts/loader.js" defer></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    /*Шапка*/
+    
+    .blackout {
+        height: 100%;
+        background-color: rgba(0%, 0%, 0%, 0.25);
+    }
+    
+    .angleSquares {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .topLeftSquares {
+        background-image: url(media/images/angleOfSquares/topLeft/angleSquares.svg);
+        top: 0;
+        left: 0;
+    }
+    
+    .bottomLeftSquares {
+        background-image: url(media/images/angleOfSquares/bottomLeft/angleSquares.svg);
+        bottom: 0;
+        left: 0;
+    }
+    
+    .bottomRightSquares {
+        background-image: url(media/images/angleOfSquares/bottomRight/angleSquares.svg);
+        bottom: 0;
+        right: 0;
+    }
+    
+    .topRightSquares {
+        background-image: url(media/images/angleOfSquares/topRight/angleSquares.svg);
+        top: 0;
+        right: 0;
+    }
+    
+    .buttonAndLogo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .logoInButtonAndLogo {
+        display: block;
+    }
+    
+    .buttonInButtonAndLogo {
+        position: relative;
+        display: block;
+        background-color: #FF7F2A;
+        transition: 0.5s;
+        text-decoration: none;
+    }
+    
+    .textInbuttonInButtonAndLogo {
+        margin: 0 auto;
+        color: #FFFFFF;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    /*Что такое ARStand*/
+    
+    main {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+    
+    .ARStandInSquared {
+        display: block;
+    }
+    
+    .whatIsARStandText {
+        font-family: 'Roboto Condensed', sans-serif;
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+    }
+    /*медиа запросы*/
+    
+    @media screen and (orientation: landscape) {
+        .angleSquares {
+            width: 37vh;
+            height: 37vh;
+        }
+        .logoInButtonAndLogo {
+            height: 50vh;
+        }
+        .buttonInButtonAndLogo {
+            height: 10vh;
+            width: 30vh;
+            margin: 0 auto;
+            margin-top: 4vh;
+            border: 0.75vh solid #FFFFFF;
+            border-radius: 5.25vh;
+        }
+        .textInbuttonInButtonAndLogo {
+            font-size: 3.5vh;
+        }
+    }
+    
+    @media screen and (orientation: portrait) {
+        .angleSquares {
+            width: 37vw;
+            height: 37vw;
+        }
+        .logoInButtonAndLogo {
+            height: 55vw;
+        }
+        .buttonInButtonAndLogo {
+            height: 12vw;
+            width: 35vw;
+            margin: 0 auto;
+            margin-top: 5vw;
+            border: 1vw solid #FFFFFF;
+            border-radius: 7vw;
+            font-size: 4vw;
+        }
+        .textInbuttonInButtonAndLogo {
+            font-size: 4vw;
+        }
+    }
+    
+    @media(pointer: fine) {
+        .buttonInButtonAndLogo:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    @media screen and (min-width: 808px) {
+        .ARStandInSquared {
+            width: 768px;
+            margin: 0 auto;
+            margin-top: 90px;
+            margin-bottom: 60px;
+        }
+        .whatIsARStandText {
+            font-size: 35px;
+            margin-bottom: 60px;
+        }
+    }
+    
+    @media screen and (max-width: 808px) {
+        .ARStandInSquared {
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 60px;
+            margin-bottom: 45px;
+        }
+        .whatIsARStandText {
+            font-size: 25px;
+            margin-bottom: 45px;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        .ARStandInSquared {
+            margin-top: 45px;
+            margin-bottom: 30px;
+        }
+        .whatIsARStandText {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
+<body>
+    <div class="workingLoader">
+        <div class="loaderFirstElement"><img src="media/images/logo.svg" alt="Логотип"></div>
+        <div class="loaderSecondElement">
+            <div class="firstCircle"></div>
+            <div class="secondCircle"></div>
+            <div class="thirdCircle"></div>
+        </div>
+    </div>
+    <header id="header" data-vide-bg="mp4: media/video/mp4/backgroundVideo, webm: media/video/webm/backgroundVideo, ogv: media/video/ogv/backgroundVideo, poster: media/video/poster/posterVideo">
+        <div class="blackout">
+            <div class="topLeftSquares angleSquares"></div>
+            <div class="bottomLeftSquares angleSquares"></div>
+            <div class="bottomRightSquares angleSquares"></div>
+            <div class="topRightSquares angleSquares"></div>
+            <div class="buttonAndLogo"> <img src="media/images/logo.svg" alt="Логотип" class="logoInButtonAndLogo"> <a href="#" class="buttonInButtonAndLogo"><span class="textInbuttonInButtonAndLogo">Сделать заказ</span></a> </div>
+        </div>
+    </header>
+    <main>
+        <div class="whatIsARStandBlock"><img src="media/images/ARStandInSquared.svg" alt="ARStend" class="ARStandInSquared">
+            <p class="whatIsARStandText">ARSTAND - это инструмент для создания сцен гибридной реальности, где физический и цифровой объекты существуют и взаимодействуют в реальном времени.</p>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

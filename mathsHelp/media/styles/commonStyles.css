@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+#content {
+    max-width: 992px;
+    margin: 0 auto;
+}

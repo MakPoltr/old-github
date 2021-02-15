@@ -1,0 +1,67 @@
+@keyframes circularMotion {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.workingPreloader {
+    background-color: #0F0C3E;
+    opacity: 1;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.notWorkingPreloader {
+    opacity: 0;
+    display: none;
+}
+
+.workingPreloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    background-image: url("../images/planets/earth.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+img[alt="Рокета"] {
+    display: block;
+    animation: circularMotion 5s infinite linear;
+}
+
+@media screen and (orientation: landscape) {
+    .loader {
+        width: 65vh;
+        height: 65vh;
+        background-size: 45vh 45vh;
+    }
+    img[alt="Рокета"] {
+        height: 15vh;
+        transform-origin: 32.5vh 50%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .loader {
+        width: 65vw;
+        height: 65vw;
+        background-size: 45vw 45vw;
+    }
+    img[alt="Рокета"] {
+        height: 15vw;
+        transform-origin: 32.5vw 50%;
+    }
+}

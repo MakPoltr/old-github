@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Карта распространения коронавируса в России</title>
+    <script src="media/libraries/Chart/Chart.min.js"></script>
+    <script src="media/libraries/Annyang/annyang.min.js"></script>
+    <script src="media/scripts/index.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP4XGGjVK__TY2mhfgKZuY0tbpXUrkoME&callback=initMap&libraries=&v=beta&map_ids=79922c147f78d817" defer></script>
+    <link rel="stylesheet" href="media/styles/index.css">
+</head>
+<body>
+    <div class="COVIDinf">
+        <h1>Карта распространения коронавируса в России</h1>
+        <canvas class="chartsForRussia" height="120px" width="300px"></canvas>
+        <h2>Коронавирус в регионах</h2>
+        <div class="COVIDDataTable">
+            <div class="tableRow tableHeaders">
+                <div>Регион</div>
+                <div>Выздр.</div>
+                <div>Погиб.</div>
+                <div>Зараж.</div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+</body></html>

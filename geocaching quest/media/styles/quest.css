@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.buttonReturnsQuestSelection {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(../images/back_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.rightButtons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20vw;
+    z-index: 1;
+}
+
+.rightButtons > div {
+    height: 20vw;
+}
+
+.locationDescriptionOpenButton {
+    background-image: url(../images/location_description_open_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.geotagDisplayStatusButton {
+    margin-top: 20px;
+    background-image: url(../images/hide_geotag_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.geotagHidden {
+    background-image: url(../images/geotag_display_button.svg);
+}
+
+.containerDescribingLocation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    background: linear-gradient(to top left, #655D54, #EE2C2C);
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s;
+}
+
+.containerDescribingLocationActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+.descriptionLocation {
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 5px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: scroll;
+    font-family: 'PT Serif', serif;
+}
+
+.hiddenLocationDescriptionButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: calc(40vw/3);
+    height: calc(40vw/3);
+    background-image: url(../images/hide_map_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.descriptionLocation > h1 {
+    font-size: 28px;
+    color: #393530;
+    font-weight: normal;
+}
+
+.descriptionLocation > h1:first-letter {
+    color: #EE2C2C;
+}
+
+.stripesUnderHeading {
+    height: 5px;
+    width: 139px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stripesUnderHeading div {
+    border-radius: 2.5px;
+}
+
+.stripesUnderHeading div:first-child {
+    width: 23px;
+    background-color: #EE2C2C;
+}
+
+.stripesUnderHeading div:last-child {
+    width: 111px;
+    background-color: #393530;
+
+}
+
+.descriptionLocation > h2 {
+    margin-top: 13px;
+    font-size: 20px;
+    color: #393530;
+    font-weight: normal;
+}
+
+.descriptionLocation > p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #393530;
+    font-weight: normal;
+}

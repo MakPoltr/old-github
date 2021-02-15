@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Название приложения</title>
+</head>
+<style>
+    @font-face {
+        font-family: 'Rounds Black';
+        src: url('media/fonts/Rounds_Black.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background: #453C28;
+    }
+    
+    main {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: url(media/image/backgroundImage.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 9vh;
+        padding-top: 2vh;
+        padding-bottom: 3.5vh;
+        color: #ffffff;
+        font-family: 'Rounds Black';
+    }
+    
+    .firstForm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .firstForm label:not(:nth-last-of-type(1)) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.15);
+        width: calc((100vw - 40px)/4);
+        height: calc((100vw - 40px)/4);
+        border-radius: 50%;
+        border: calc((100vw - 40px)/40) solid #ffffff;
+        color: #ffffff;
+        font-family: 'Rounds Black';
+        font-size: calc((100vw - 40px)*(7/60));
+        transition-property: border-color, color, background-color;
+        transition-duration: 500ms;
+    }
+    
+    .firstForm label:not(:nth-of-type(3n - 2)) {
+        margin-left: calc((100vw - 40px)/16);
+    }
+    
+    .firstForm label:nth-of-type(n+4):nth-of-type(-n+5) {
+        margin-top: calc((100vw - 40px)/32);
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    input[id="firstBook"]:checked ~ label[for="firstBook"],
+    input[id="secondBook"]:checked ~ label[for="secondBook"],
+    input[id="thirdBook"]:checked ~ label[for="thirdBook"],
+    input[id="fourthBook"]:checked ~ label[for="fourthBook"],
+    input[id="fifthBook"]:checked ~ label[for="fifthBook"] {
+        color: #80E880;
+        border-color: #80E880;
+        background-color: rgba(92, 172, 92, 0.35);
+    }
+    
+    label[for="bookFormSubmission"] {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: calc((100vw - 40px)*(5/64));
+        margin-right: calc((100vw - 40px)/16);
+        width: calc((100vw - 40px)*(5/8));
+        height: calc((100vw - 40px)*(7/40));
+        border-radius: calc((100vw - 40px)*(7/80));
+        border: calc((100vw - 40px)/40) solid #ffffff;
+        color: rgba(255, 255, 255, 0);
+        font-family: 'Rounds Black';
+        font-size: calc((100vw - 40px)*(7/96));
+        transition-property: background, color;
+        transition-duration: 1s;
+        background: repeating-linear-gradient( -55deg, #fff, #fff calc((100vw - 40px)/40), rgba(255, 255, 255, 0) calc((100vw - 40px)/40), rgba(255, 255, 255, 0) calc((100vw - 40px)/17.25));
+    }
+    
+    input[type="submit"] {
+        display: none;
+    }
+    
+    input[type="radio"]:checked ~ label[for="bookFormSubmission"] {
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0);
+    }
+    
+    h2 {
+        font-size: 5vh;
+        padding-top: 6vh;
+        color: #ffffff;
+        font-family: 'Rounds Black';
+    }
+</style>
+
+<body>
+    <main>
+        <h1>КНИГУС</h1>
+        <form action="#" class="form firstForm">
+            <input type="radio" name="bookSelection" id="firstBook" value="b1" onclick="activationAndDeactivationBookSubmissionForm()">
+            <input type="radio" name="bookSelection" id="secondBook" value="b2" onclick="activationAndDeactivationBookSubmissionForm()">
+            <input type="radio" name="bookSelection" id="thirdBook" value="b3" onclick="activationAndDeactivationBookSubmissionForm()">
+            <input type="radio" name="bookSelection" id="fourthBook" value="b4" onclick="activationAndDeactivationBookSubmissionForm()">
+            <input type="radio" name="bookSelection" id="fifthBook" value="b5" onclick="activationAndDeactivationBookSubmissionForm()">
+            <label for="firstBook">1</label>
+            <label for="secondBook">2</label>
+            <label for="thirdBook">3</label>
+            <label for="fourthBook">4</label>
+            <label for="fifthBook">5</label>
+            <label for="bookFormSubmission">отправить</label>
+            <input type="submit" value="Отправить" id="bookFormSubmission" disabled> </form>
+        <h2>УПРАВЛЕНИЕ:</h2>
+        <form action="#" class="form secondForm"> </form>
+    </main>
+    <script>
+        function activationAndDeactivationBookSubmissionForm() {
+            let bookSubmissionForm = document.getElementById("bookFormSubmission")
+            bookSubmissionForm.removeAttribute('disabled');
+        }
+    </script>
+</body>
+
+</html>

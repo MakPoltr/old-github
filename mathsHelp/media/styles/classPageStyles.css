@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.classLink {
+    display: block;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.nameClass {
+    background-color: #151515;
+}
+
+#classes {
+    max-width: 952px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.nameClass div {
+    margin: 0 auto;
+}
+
+.nameClass p {
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+
+@media screen and (min-width: 993px) and (hover) {
+    .nameClass:hover {
+        transition-duration: 500ms;
+        transform: scale(1.05);
+    }
+    .nameClass:not(:hover) {
+        transition-duration: 500ms;
+        transform: scale(1);
+    }
+}
+
+@media screen and (min-width: 516px) {
+    .nameClass {
+        width: 198px;
+        height: 198px;
+    }
+    .nameClass div {
+        width: 130px;
+    }
+    .nameClass img {
+        margin-top: 17px;
+        height: 130px;
+        width: 130px;
+    }
+    .nameClass p {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .nameClass {
+        width: 248px;
+        height: 248px;
+    }
+    .nameClass div {
+        width: 162px;
+    }
+    .nameClass img {
+        margin-top: 21px;
+        height: 162px;
+        width: 162px;
+    }
+    .nameClass p {
+        font-size: 41px;
+    }
+}

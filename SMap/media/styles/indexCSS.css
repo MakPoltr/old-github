@@ -1,0 +1,194 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        height: 100vh;
+        background-color: #0F0C3E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    main {
+        position: absolute;
+        background-image: url("../images/planets/orbitsAndSun.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .planet {
+        display: block;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    
+    .mercury {
+        background-image: url("../images/planets/mercury.png");
+        animation: 4s linear circularMotion infinite;
+    }
+    
+    .venus {
+        background-image: url("../images/planets/venus.png");
+        animation: 6s linear circularMotion infinite;
+    }
+    
+    .earth {
+        background-image: url("../images/planets/earth.png");
+        animation: 8s linear circularMotion infinite;
+    }
+    
+    .mars {
+        background-image: url("../images/planets/mars.png");
+        animation: 10s linear circularMotion infinite;
+    }
+    
+    .jupiter {
+        background-image: url("../images/planets/jupiter.png");
+        animation: 12s linear circularMotion infinite;
+    }
+    
+    .saturn {
+        background-image: url("../images/planets/saturn.png");
+        animation: 14s linear circularMotion infinite;
+    }
+    
+    .uranus {
+        background-image: url("../images/planets/uranus.png");
+        animation: 16s linear circularMotion infinite;
+    }
+    
+    .neptune {
+        background-image: url("../images/planets/neptune.png");
+        animation: 18s linear circularMotion infinite;
+    }
+    
+    @media screen and (orientation: landscape) {
+        main {
+            width: 90vh;
+            height: 90vh;
+        }
+        .mercury {
+            height: 3.5vh;
+            width: 3.5vh;
+            top: 33.45vh;
+            left: 43.25vh;
+            transform-origin: 50% 11.55vh;
+        }
+        .venus {
+            height: 4vh;
+            width: 4vh;
+            left: 53.5vh;
+            top: 32.5vh;
+            transform-origin: -8.5vh 12.5vh;
+        }
+        .earth {
+            height: 4vh;
+            width: 4vh;
+            left: 62.8vh;
+            top: 43vh;
+            transform-origin: -17.8vh 50%;
+        }
+        .mars {
+            height: 3vh;
+            width: 3vh;
+            left: 61vh;
+            top: 61vh;
+            transform-origin: -16vh -16vh;
+        }
+        .jupiter {
+            height: 5vh;
+            width: 5vh;
+            left: 42.5vh;
+            top: 72.3vh;
+            transform-origin: 50% -27.3vh;
+        }
+        .saturn {
+            height: 4vh;
+            width: 4vh;
+            left: 18.4vh;
+            top: 67.6vh;
+            transform-origin: 26.6vh -22.6vh;
+        }
+        .uranus {
+            height: 4.5vh;
+            width: 4.5vh;
+            left: 2.95vh;
+            top: 42.75vh;
+            transform-origin: 42.05vh 50%;
+        }
+        .neptune {
+            height: 4.5vh;
+            width: 4.5vh;
+            left: 11.05vh;
+            top: 11.05vh;
+            transform-origin: 33.95vh 33.95vh;
+        }
+    }
+    
+    @media screen and (orientation: portrait) {
+        main {
+            width: 90vw;
+            height: 90vw;
+        }
+        .mercury {
+            height: 3.5vw;
+            width: 3.5vw;
+            top: 33.45vw;
+            left: 43.25vw;
+            transform-origin: 50% 11.55vw;
+        }
+        .venus {
+            height: 4vw;
+            width: 4vw;
+            left: 53.5vw;
+            top: 32.5vw;
+            transform-origin: -8.5vw 12.5vw;
+        }
+        .earth {
+            height: 4vw;
+            width: 4vw;
+            left: 62.8vw;
+            top: 43vw;
+            transform-origin: -17.8vw 50%;
+        }
+        .mars {
+            height: 3vw;
+            width: 3vw;
+            left: 61vw;
+            top: 61vw;
+            transform-origin: -16vw -16vw;
+        }
+        .jupiter {
+            height: 5vw;
+            width: 5vw;
+            left: 42.5vw;
+            top: 72.3vw;
+            transform-origin: 50% -27.3vw;
+        }
+        .saturn {
+            height: 4vw;
+            width: 4vw;
+            left: 18.4vw;
+            top: 67.6vw;
+            transform-origin: 26.6vw -22.6vw;
+        }
+        .uranus {
+            height: 4.5vw;
+            width: 4.5vw;
+            left: 2.95vw;
+            top: 42.75vw;
+            transform-origin: 42.05vw 50%;
+        }
+        .neptune {
+            height: 4.5vw;
+            width: 4.5vw;
+            left: 11.05vw;
+            top: 11.05vw;
+            transform-origin: 33.95vw 33.95vw;
+        }
+    }

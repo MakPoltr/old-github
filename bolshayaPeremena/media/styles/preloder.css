@@ -1,0 +1,253 @@
+@keyframes firstLoaderSlider {
+    0% {
+        background-position: 0 42.1vh;
+    }
+    8.33% {
+        background-position: 0 42.1vh;
+    }
+    33.33% {
+        background-position: 0 15.75vh;
+    }
+    75% {
+        background-position: 0 15.75vh;
+    }
+    100% {
+        background-position: 0 42.1vh;
+    }
+}
+
+@keyframes secondLoaderSliderForTop {
+    0% {
+        background-position: 0 -30.4vh;
+    }
+    33.33% {
+        background-position: 0 -30.4vh;
+    }
+    50% {
+        background-position: 0 -13.9vh;
+    }
+    58.33% {
+        background-position: 0 -13.9vh;
+    }
+    75% {
+        background-position: 0 -30.4vh;
+    }
+    100% {
+        background-position: 0 -30.4vh;
+    }
+}
+
+@keyframes secondLoaderSliderForBottom {
+    0% {
+        background-position: 0 30.4vh;
+    }
+    33.33% {
+        background-position: 0 30.4vh;
+    }
+    50% {
+        background-position: 0 13.9vh;
+    }
+    58.33% {
+        background-position: 0 13.9vh;
+    }
+    75% {
+        background-position: 0 30.4vh;
+    }
+    100% {
+        background-position: 0 30.4vh;
+    }
+}
+
+@keyframes secondLoaderSliderForRight {
+    0% {
+        background-position: 49.6vh calc((92*60vh/105)/92);
+    }
+    33.33% {
+        background-position: 49.6vh calc((92*60vh/105)/92);
+    }
+    50% {
+        background-position: 24.8vh calc((92*60vh/105)/92);
+    }
+    58.33% {
+        background-position: 24.8vh calc((92*60vh/105)/92);
+    }
+    75% {
+        background-position: 49.6vh calc((92*60vh/105)/92);
+    }
+    100% {
+        background-position: 49.6vh calc((92*60vh/105)/92);
+    }
+}
+
+@keyframes secondLoaderSliderForLeft {
+    0% {
+        background-position: -49.6vh calc((92*60vh/105)/92);
+    }
+    33.33% {
+        background-position: -49.6vh calc((92*60vh/105)/92);
+    }
+    50% {
+        background-position: -24.8vh calc((92*60vh/105)/92);
+    }
+    58.33% {
+        background-position: -24.8vh calc((92*60vh/105)/92);
+    }
+    75% {
+        background-position: -49.6vh calc((92*60vh/105)/92);
+    }
+    100% {
+        background-position: -49.6vh calc((92*60vh/105)/92);
+    }
+}
+
+@keyframes thirdLoaderSlider {
+    0% {
+        background-color: #0052FF;
+    }
+    37.5% {
+        background-color: #0052FF;
+    }
+    50% {
+        background-color: #F43737;
+    }
+    58.33% {
+        background-color: #F43737;
+    }
+    70.83% {
+        background-color: #0052FF;
+    }
+    100% {
+        background-color: #0052FF;
+    }
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: 2;
+    opacity: 1;
+    visibility: visible;
+    transition-property: opacity, visibility;
+    transition-duration: 0.75s;
+}
+
+.preloader.deactivated {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 60vh;
+    width: calc(92*60vh/105);
+    transform: translate(-50%, -50%);
+    padding: calc((92*60vh/105)/46);
+    background-color: #0052FF;
+    background-clip: content-box;
+    overflow: hidden;
+}
+
+.loaderMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(../images/loader_mask.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.firstProgressBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: calc((92*60vh/105)/46);
+    background-image: url(../images/first_progress_background.svg);
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-origin: content-box;
+    background-size: 100% auto;
+    background-position: 0 42.1vh;
+    animation-name: firstLoaderSlider;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    z-index: 3;
+    transform: translateZ(0);
+}
+
+.secondProgressBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 31.5vh;
+    z-index: 3;
+}
+
+.secondProgressBar div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: calc((92*60vh/105)/46);
+    padding-bottom: 0;
+    background-image: url(../images/second_progress_background.svg);
+    background-clip: content-box;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transform: translateZ(0);
+}
+
+.secondProgressBar div:nth-child(1) {
+    background-position: 0 -30.4vh;
+    animation-name: secondLoaderSliderForTop;
+}
+
+.secondProgressBar div:nth-child(2) {
+    background-position: 0 30.4vh;
+    animation-name: secondLoaderSliderForBottom;
+}
+
+.secondProgressBar div:nth-child(3) {
+    background-position: 50.3vh calc((92*60vh/105)/92);
+    animation-name: secondLoaderSliderForRight;
+}
+
+.secondProgressBar div:nth-child(4) {
+    background-position: -50.3vh calc((92*60vh/105)/92);
+    animation-name: secondLoaderSliderForLeft;
+}
+
+.thirdProgressBar {
+    position: absolute;
+    top: 11.5vh;
+    left: 18.5vh;
+    width: 30%;
+    height: 10vh;
+    transform: skew(60deg, -30deg) translateZ(0);
+    background-color: #0052FF;
+    animation-name: thirdLoaderSlider;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    z-index: 4;
+}

@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.arjs-loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #E9CBAF;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arjs-loader > img {
+    width: 60vw;
+}
+
+.indexPageBackButton {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(../images/back_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.questMapOpenButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20vw;
+    height: 20vw;
+    background-image: url(../images/map_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+.controlMenu {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80vw;
+    height: 20vw;
+    display: flex;
+    z-index: 1;
+}
+
+.controlMenu > div {
+    width: 32vw;
+    height: 100%;
+}
+
+.previousQuestButton {
+    background-image: url(../images/button_previous.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.nextQuestButton {
+    background-image: url(../images/button_next.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.questSelectionButton {
+    width: 16vw;
+    background-image: url(../images/select_button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.mapContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    background: linear-gradient(to top left, #655D54, #EE2C2C);
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.5s;
+}
+
+.mapContainerActive {
+    opacity: 1;
+    visibility: visible;
+}
+
+#map {
+    margin: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius: 5px;
+    background-color: black;
+}
+
+.hideMapButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: calc(40vw/3);
+    height: calc(40vw/3);
+    background-image: url(../images/hide_map_button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}

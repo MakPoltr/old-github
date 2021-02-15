@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.COVIDinf {
+    height: 100%;
+    width: 328px;
+    padding: 20px 10px 20px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(2, 62, 88, 0.75);
+    border-right: 8px solid rgba(43, 102, 117, 0.75);
+    overflow-y: scroll;
+}
+
+.COVIDinf h1 {
+    font-family: "Mont Heavy";
+    font-size: 22px;
+    color: rgb(138, 191, 181);
+}
+
+.COVIDinf h2 {
+    margin-top: 20px;
+    font-family: "Mont Heavy";
+    font-size: 17px;
+    color: rgb(138, 191, 181);
+}
+
+.COVIDDataTable {
+    margin-top: 5px;
+}
+
+.COVIDDataTable .tableRow {
+    width: 100%;
+    height: 17px;
+    font-family: "Golos Bold";
+    display: flex;
+    line-height: 17px;
+}
+
+.COVIDDataTable .regularRow {
+    font-size: 10px;
+    color: rgb(43, 102, 117);
+    transition: color 250ms;
+}
+
+.COVIDDataTable .regularRow:hover {
+    color: rgb(138, 191, 181);
+    cursor: pointer;
+}
+
+.COVIDDataTable .tableHeaders {
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: rgb(138, 191, 181);
+}
+
+.COVIDDataTable .tableRow > div {
+    text-align: right;
+    width: 60px;
+}
+
+.COVIDDataTable .tableRow > div:nth-child(1) {
+    text-align: left;
+    width: 120px;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(43, 102, 117, 0.35);
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(43, 102, 117, 0.75)
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+    border-radius: 0px;
+}
+
+.chartsForRussia {
+    margin-top: 15px;
+}
+
+.gm-style .gm-style-iw-c {
+    background-color: rgba(2, 62, 88, 0.75) !important;
+    box-shadow: none !important;
+    border: 8px solid rgba(43, 102, 117, 0.75) !important;
+}
+
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track,
+.gm-style .gm-style-iw-d::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.gm-style .gm-style-iw-t::after {
+    background: linear-gradient(45deg, rgba(43, 102, 117, 0.75) 50%, rgba(43, 102, 117, 0) 51%, rgba(43, 102, 117, 0) 100%), linear-gradient(45deg, rgba(2, 62, 88, 0.75) 50%, rgba(2, 62, 88, 0) 51%, rgba(2, 62, 88, 0) 100%) !important;
+    box-shadow: none !important;
+}
+
+.gm-ui-hover-effect {
+    top: 7px !important;
+    right: 7px !important;
+    width: 20px !important;
+    height: 20px !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no'?%3e%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='isolation:isolate' viewBox='575.859 335.859 38.282 38.282' width='38.282pt' height='38.282pt'%3e%3cpath d=' M 595 347.929 L 584.393 337.322 C 582.442 335.371 579.274 335.371 577.322 337.322 L 577.322 337.322 C 575.371 339.274 575.371 342.442 577.322 344.393 L 587.929 355 L 577.322 365.607 C 575.371 367.558 575.371 370.726 577.322 372.678 L 577.322 372.678 C 579.274 374.629 582.442 374.629 584.393 372.678 L 595 362.071 L 605.607 372.678 C 607.558 374.629 610.726 374.629 612.678 372.678 L 612.678 372.678 C 614.629 370.726 614.629 367.558 612.678 365.607 L 602.071 355 L 612.678 344.393 C 614.629 342.442 614.629 339.274 612.678 337.322 L 612.678 337.322 C 610.726 335.371 607.558 335.371 605.607 337.322 L 595 347.929 Z ' fill='rgb(138,191,181)'/%3e%3c/svg%3e") !important;
+    background-size: cover !important;
+    opacity: 1 !important;
+    transition: all 0.35s !important;
+}
+
+.gm-ui-hover-effect:hover {
+    transform: scale(1.2) !important;
+}
+
+.gm-ui-hover-effect > img {
+    display: none !important;
+}
+
+.regionName {
+    font-family: "Mont Heavy";
+    font-size: 22px;
+    color: rgb(138, 191, 181);
+}
+
+.textInfAboutRegion p {
+    margin-top: 5px;
+}
+
+.textInfAboutRegion {
+    font-family: "Golos Bold";
+    font-size: 14px;
+    min-width: 280px;
+    color: rgb(138, 191, 181);
+    padding: 0 10px 8px 10px;
+
+}
+
+.regionNewsCOVID {
+    font-size: 16px;
+    font-family: "Mont Heavy";
+    color: rgba(138, 191, 181, 0.6);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(138, 191, 181, 0.6);
+    transition: all 0.25s;
+}
+
+.regionNewsCOVID:hover {
+    border-bottom-color: rgba(138, 191, 181, 1);
+    color: rgba(138, 191, 181, 1);
+}
+
+.voiceAssistantButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/mute_microphone.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 350ms;
+}
+
+.voiceAssistantButton[active] {
+    background-image: url(../images/activated_microphone.svg);
+}
+
+.voiceAssistantButton:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@font-face {
+    font-family: "Golos Bold";
+    src: url("../fonts/Golos_Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Mont Heavy";
+    src: url("../fonts/Mont_Heavy.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

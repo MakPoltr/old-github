@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header > .logo {
+    width: 100%;
+    height: calc(60vw*0.313);
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: 60vw;
+    background-position: center;
+}
+
+.dividingStrip {
+    margin-top: 20px;
+    display: flex;
+}
+
+.dividingStrip > div {
+    flex: auto;
+    height: 5px;
+    border-radius: 2.5px;
+}
+
+.dividingStrip div:first-child {
+    background-color: #EE2C2C;
+    margin-right: 7.5px;
+}
+
+.dividingStrip div:last-child {
+    background-color: #655D54;
+    margin-left: 7.5px;
+}
+
+main {
+    padding-top: 10px;
+}
+
+main h1 {
+    font-family: 'PT Serif', serif;
+    font-weight: normal;
+    font-size: 28px;
+    color: #393530;
+}
+
+main h1:first-letter {
+    color: #EE2C2C;
+}
+
+main p {
+    font-family: 'PT Serif', serif;
+    font-size: 18px;
+    text-indent: 15px;
+    color: #393530;
+    margin-top: 2.5px;
+    margin-left: 15px;
+}
+
+main p:nth-of-type(1) {
+    margin-top: 0px;
+}
+
+main > a {
+    display: block;
+    width: 103px;
+    height: 44.8px;
+    margin-top: 12.5px;
+    text-decoration: none;
+    background-image: url(../images/start_button.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

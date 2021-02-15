@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Эксперимент</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: aqua;
+        width: 100%;
+    }
+    
+    .height100vh {
+        height: 100vh;
+    }
+    
+    #fff {
+        background-color: antiquewhite;
+    }
+</style>
+
+<body>
+    <header id="header"></header>
+    <div id="fff"></div>
+    <main>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium voluptatem, aperiam adipisci, velit et, consequatur iusto deserunt tempore neque unde soluta itaque doloremque incidunt. Optio, labore, ipsam. Impedit voluptatum, rerum.</div>
+        <div>Optio amet, debitis sed obcaecati numquam culpa enim consectetur temporibus suscipit saepe, reprehenderit dolorem totam. Quae enim, accusantium hic obcaecati at repellat animi recusandae, minima, modi nemo nobis reiciendis ipsa.</div>
+        <div>Dignissimos eligendi non repellendus quam. Ut veritatis, repellat enim magnam eos eligendi perspiciatis, quidem culpa officia ab commodi asperiores, quod ex laborum est cumque rem. Vel doloremque inventore, in a.</div>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quibusdam fugit omnis soluta minima et porro dolores incidunt error accusantium odio consequuntur earum quasi iusto illum sapiente impedit tempore, suscipit.</div>
+        <div>Itaque eligendi aperiam, ad? Molestiae ipsum, molestias itaque temporibus laudantium, vero voluptatem quibusdam non ipsam ipsa amet illum deserunt. Deserunt incidunt quas similique. Ratione voluptates, sit harum rerum deserunt mollitia.</div>
+        <div>Distinctio minus sunt dolore, eius odit iusto, fugiat velit, delectus corporis nisi nulla totam eaque aliquam a omnis accusamus amet, nemo suscipit voluptatibus ea! Quae incidunt ad voluptates possimus modi.</div>
+        <div>Reiciendis perferendis, sapiente provident ab aspernatur autem dolores! Quae debitis sint dolores molestias, doloremque modi distinctio dolorum atque, rerum odio, voluptatum est facere iure, sunt. Vitae dicta eum, tempore similique.</div>
+        <div>Sequi animi perspiciatis itaque, impedit mollitia, quos deleniti quam maiores totam minus sed consectetur vitae eaque unde quas modi excepturi doloribus. Reiciendis, assumenda totam! Dolorem velit quo aliquid enim molestiae?</div>
+        <div>Modi sunt quaerat molestiae sequi saepe architecto placeat, quo hic dolore repudiandae doloribus blanditiis quis sit deleniti libero molestias voluptas, assumenda fugiat quae fugit error maxime. Laboriosam, officia temporibus in.</div>
+        <div>Soluta quos dolorem et deserunt voluptates. Est reiciendis nisi, ullam voluptate a quasi eius consectetur eaque molestiae excepturi aliquam blanditiis non, voluptates natus eveniet ipsa quas ut inventore. Repellat, earum.</div>
+        <div>Iusto facere reprehenderit, molestias vitae unde dignissimos possimus hic, culpa, modi corporis error eum rem itaque quae ullam. Laborum atque repellat labore quisquam dignissimos perferendis quo delectus unde ad optio.</div>
+        <div>Earum alias minus non voluptates harum amet expedita vel, velit labore pariatur consectetur totam provident eos nisi ullam. Nihil quaerat ut sint hic facilis nam commodi a eaque excepturi odio.</div>
+        <div>Minus, dolore accusamus harum, dicta ullam dolorem, sequi maxime aspernatur, numquam delectus natus itaque. Quos deserunt, architecto cumque temporibus ad, odio quidem ratione quam earum cum provident enim eveniet animi.</div>
+    </main>
+    <script>
+        var mql = window.matchMedia("(orientation: portrait)");
+        const heightWindow = window.innerHeight > window.innerWidth ? window.innerHeight : window.innerWidth;
+        const widthWindow = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
+
+        function heightAssignmentInVh(elementId, numberVh) {
+            var element = document.getElementById(elementId);
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                function calculation100Vh(request) {
+                    if (request.matches) {
+                        element.style.height = heightWindow * numberVh / 100 + "px";
+                    }
+                    else {
+                        element.style.height = widthWindow * numberVh / 100 + "px";
+                    }
+                }
+                mql = window.matchMedia("(orientation: portrait)");
+                mql.addListener(calculation100Vh);
+                calculation100Vh(mql);
+            }
+            else {
+                element.style.height = numberVh + "vh";
+            }
+        }
+        heightAssignmentInVh("header", 100);
+    </script>
+</body>
+
+</html>

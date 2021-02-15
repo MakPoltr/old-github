@@ -1,0 +1,73 @@
+.toolbar {
+    width: 50px;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: #464646;
+    border-radius: 0 15px 15px 0;
+    border-right: 1px solid #5D5D5D;
+    border-top: 1px solid #5D5D5D;
+    border-bottom: 1px solid #5D5D5D;
+}
+
+.tool {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-color: #464646;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px;
+    transition-property: background-color;
+    transition-duration: 300ms;
+}
+
+.toolbar div:not(:first-child) {
+    border-top: 1px solid #5D5D5D;
+}
+
+#export {
+    background-image: url(../images/menuIcons/export.svg);
+}
+
+#import {
+    background-image: url(../images/menuIcons/import.svg);
+}
+
+#normalization {
+    background-image: url(../images/menuIcons/normalization.svg);
+}
+
+#clearCanvas {
+    background-image: url(../images/menuIcons/clearCanvas.svg);
+}
+
+#restart {
+    background-image: url(../images/menuIcons/restart.svg);
+}
+
+#server {
+    background-image: url(../images/menuIcons/server.svg);
+}
+
+#validation {
+    background-image: url(../images/menuIcons/validation.svg);
+}
+
+#emotions {
+    background-image: url(../images/menuIcons/emotions.svg);
+}
+
+#humanPhrase {
+    background-image: url(../images/menuIcons/humanPhrase.svg);
+}
+
+#botPhrase {
+    background-image: url(../images/menuIcons/botPhrase.svg);
+}
+
+.tool:hover {
+    background-color: #5D5D5D;
+}

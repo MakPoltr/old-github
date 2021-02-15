@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #000000;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+main > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.75s;
+    overflow-y: scroll;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    color: #FFFFFF;
+}
+
+.content h2 {
+    padding-top: 20px;
+    font-family: 'Gilroy Extra Bold', serif;
+    font-size: 45px;
+}
+
+.content p {
+    padding: 20px;
+    padding-bottom: 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-indent: 40px;
+}
+
+.descriptionOfMe span {
+    color: #0052FF;
+}
+
+.whyAmIParticipating span {
+    color: #F43737;
+}
+
+.descriptionOfMe p::selection {
+    background-color: #0052FF;
+    color: #FFFFFF;
+}
+
+.descriptionOfMe h2::selection {
+    background-color: #0052FF;
+    color: #FFFFFF;
+}
+
+.descriptionOfMe h2 span::selection {
+    background-color: #0052FF;
+    color: #FFFFFF;
+}
+
+.descriptionOfMe h3::selection {
+    background-color: #0052FF;
+    color: #FFFFFF;
+}
+
+.whyAmIParticipating p::selection {
+    background-color: #F43737;
+    color: #FFFFFF;
+}
+
+.whyAmIParticipating h2::selection {
+    background-color: #F43737;
+    color: #FFFFFF;
+}
+
+.whyAmIParticipating h2 span::selection {
+    background-color: #F43737;
+    color: #FFFFFF;
+}
+
+.whyAmIParticipating h3::selection {
+    background-color: #F43737;
+    color: #FFFFFF;
+}
+
+.back {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-family: 'Gilroy Extra Bold', serif;
+    font-size: 30px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: color;
+    transition-duration: 0.25s;
+}
+
+.descriptionOfMe > .content > .back:hover {
+    color: #0052FF;
+}
+
+.whyAmIParticipating > .content > .back:hover {
+    color: #F43737;
+}

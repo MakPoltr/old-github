@@ -1,0 +1,128 @@
+		header {
+		    display: flex;
+		    height: 60px;
+		    background-color: #151515;
+		    align-items: center;
+		}
+		
+		img[alt="logo"] {
+		    height: 40px;
+		}
+		
+		#logo {
+		    margin-left: 20px;
+		    height: 40px;
+		}
+		
+		@media screen and (min-width: 993px) {
+		    nav {
+		        display: flex;
+		        align-items: center;
+		        display: block;
+		    }
+		    #index {
+		        margin-left: 50px;
+		    }
+		    #navClosed,
+		    #navOpen {
+		        display: block;
+		    }
+		    .navBlock {
+		        font-size: 20px;
+		        margin-left: 30px;
+		        font-family: 'Oswald', sans-serif;
+		        color: #FFFFFF;
+		    }
+		    @media (hover) {
+		        .navBlock:hover {
+		            transition-property: color;
+		            transition-duration: 500ms;
+		            color: #C0C0C0;
+		        }
+		        .navBlock:not(:hover) {
+		            transition-property: color;
+		            transition-duration: 500ms;
+		            color: #FFFFFF;
+		        }
+		        #logo:hover {
+		            transition-duration: 500ms;
+		            transform: scale(1.05);
+		        }
+		        #logo:not(:hover) {
+		            transition-duration: 500ms;
+		            transform: scale(1);
+		        }
+		        #socialNetworks a:hover {
+		            transition-duration: 500ms;
+		            transform: scale(1.05);
+		        }
+		        #socialNetworks a:not(:hover) {
+		            transition-duration: 500ms;
+		            transform: scale(1);
+		        }
+		    }
+		    #socialNetworks {
+		        height: 40px;
+		        margin-left: auto;
+		        margin-right: 20px;
+		        display: flex;
+		    }
+		    #socialNetworks img {
+		        display: block;
+		        height: 40px;
+		    }
+		    #socialNetworks a:not(:nth-child(1)) {
+		        margin-left: 20px;
+		    }
+		    img[alt="menuButton"] {
+		        display: none;
+		    }
+		}
+		
+		@media screen and (max-width: 992px) {
+		    header {
+		        justify-content: space-between;
+		    }
+		    nav {
+		        position: fixed;
+		        top: 0;
+		        left: 0;
+		        z-index: 2;
+		        background-color: #151515;
+		        width: 100%;
+		    }
+		    #navClosed {
+		        transform: scale(0);
+		    }
+		    #navOpen {
+		        transform: scale(1);
+		    }
+		    nav a {
+		        display: block;
+		        margin-left: 15%;
+		        width: calc(100% - 160px);
+		        margin-left: 80px;
+		        font-family: 'Oswald', sans-serif;
+		        text-align: center;
+		        color: #FFFFFF;
+		        font-size: 30px;
+		        padding-bottom: 5px;
+		        padding-top: 5px;
+		    }
+		    #socialNetworks {
+		        display: none;
+		    }
+		    .cancel {
+		        right: 0px;
+		        top: 10px;
+		        position: fixed;
+		    }
+		    .burger {
+		        position: static;
+		    }
+		    img[alt="menuButton"] {
+		        z-index: 3;
+		        margin-right: 20px;
+		        height: 40px;
+		    }
+		}

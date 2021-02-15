@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>AR</title>
+    <link rel="stylesheet" href="media/styles/quest.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="media/scripts/quest.js" defer></script>
+</head>
+
+<body>
+    <a href="choiceLocation.html" class="buttonReturnsQuestSelection"></a>
+    <div class="rightButtons">
+        <div class="locationDescriptionOpenButton"></div>
+        <div class="geotagDisplayStatusButton"></div>
+    </div>
+    <div class="containerDescribingLocation">
+        <div class="descriptionLocation">
+            <div class="hiddenLocationDescriptionButton"></div>
+            <h1>О локации</h1>
+            <div class="stripesUnderHeading">
+                <div></div>
+                <div></div>
+            </div>
+            <h2 id="locationName"></h2>
+            <p id="textAboutLocation"></p>
+        </div>
+
+    </div>
+
+    <a-scene vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;" embedded arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;">
+
+        <a-assets>
+            <a-asset-item id="star-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/c1952a1231e74fcab8abb6f2706545c50b88a12c/geocaching quest/media/model/star/star.glb"></a-asset-item>
+            <a-asset-item id="marker-border-glb" response-type="arraybuffer" src="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/model/border/border.glb"></a-asset-item>
+        </a-assets>
+
+        <a-entity gltf-model="#star-glb" scale="4 4 4" rotation="90 0 0" animation="property: rotation; from: 90 0 0; to: 90 0 360; loop: true; easing: linear; dur: 1500;" id="modelPointingQuestLocations"></a-entity>
+
+        <a-nft type="nft" url="https://rawcdn.githack.com/MakarPoltr/MakarPoltr.github.io/cddb9dd4ff830c9c16add0c1fd72f691cca119e2/geocaching%20quest/media/NFT%20markers/selection%20marker/marker" smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5" id="videoMarker" video-marker>
+            <a-entity gltf-model='#marker-border-glb' scale="260 260 260" position="110 0 -260">
+                <a-video playsinline webkit-playsinline src="" width="1" height="1" rotation="270 0 0" scale="2 2 1" id="locationVideoBlock"></a-video>
+            </a-entity>
+        </a-nft>
+        <a-entity camera="active: false" id="cameraForVideoMarker"></a-entity>
+        <a-entity camera look-controls-enabled='false' arjs-look-controls="smoothingFactor: 0.1" rotation-reader id="cameraForGeomarker"> </a-entity>
+    </a-scene>
+</body></html>

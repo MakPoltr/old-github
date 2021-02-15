@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node3">
+  <panorama id="node1">
+    <input levelingpitch="0" leveltileurl="tiles/360_0028_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="0.3" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="1.16" pan="34.16" fov="96.4183"/>
+      <min tilt="-81.5" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="80"/>
+    </view>
+    <userdata longitude="" latitude="" title="Гардероб" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:32:21" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="Холл" id="Холл" tilt="-7.17" pan="-177.27" url="{node2}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node2">
+    <input levelingpitch="-0.2" leveltileurl="tiles/360_0029_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-0.7" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="-1.1" pan="155.06" fov="96.4183"/>
+      <min tilt="-90" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="80"/>
+    </view>
+    <userdata longitude="" latitude="" title="Холл перед гардеробом" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:32:32" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="Гардероб" id="Гардероб" tilt="-2.52" pan="-40.24" url="{node1}" description="" skinid="ht_node"/>
+      <hotspot target="" title="Холл библиотеки" id="Холл библиотеки" tilt="-7.32" pan="159.04" url="{node3}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node3">
+    <input levelingpitch="-2.6" leveltileurl="tiles/360_0031_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-0.9" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="-4.78" pan="78.91" fov="115.634"/>
+      <min tilt="-90" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="100"/>
+    </view>
+    <userdata longitude="" latitude="" title="Холл 1 этажа" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:32:53" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="В гардероб" id="Холл перед гардеробом" tilt="2.56" pan="72.07" url="{node2}" description="" skinid="ht_node"/>
+      <hotspot target="" title="на 4 этаж" id="В ЦМИТ" tilt="-1.19" pan="176.93" url="{node8}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node6">
+    <input levelingpitch="0" leveltileurl="tiles/360_0034_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-1.5" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="0.78" pan="-162.36" fov="96.4183"/>
+      <min tilt="-90" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="80"/>
+    </view>
+    <userdata longitude="" latitude="" title="Вход в ЦМИТ" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:33:24" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="Вход в ЦМИТ" id="Вход в ЦМИТ" tilt="-1.71" pan="-168.6" url="{node7}" description="" skinid="ht_node"/>
+      <hotspot target="" title="На 1 этаж" id="На 1 этаж" tilt="-1.35" pan="79.4" url="{node3}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node7">
+    <input levelingpitch="0" leveltileurl="tiles/360_0035_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-2" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="1.45" pan="-164.74" fov="96.4183"/>
+      <min tilt="-90" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="80"/>
+    </view>
+    <userdata longitude="" latitude="" title="ЦМИТ СТЭМ-Байкал" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:33:34" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="В холл" id="В холл" tilt="-3.85" pan="-44.47" url="{node6}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node8">
+    <input levelingpitch="0.1" leveltileurl="tiles/360_0037_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-1.9" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="9.85" pan="165.42" fov="96.1154"/>
+      <min tilt="-90" pan="0" fov="5"/>
+      <max tilt="90" pan="360" fov="80"/>
+    </view>
+    <userdata longitude="" latitude="" title="Холл 4 этажа" comment="" info="" copyright="" tags="Мастер класс в ЦМИТ" author="" datetime="2018:12:07 15:33:54" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="ЦМИТ СТЭМ-Байкал" id="ЦМИТ СТЭМ-Байкал" tilt="-0.11" pan="-14.32" url="{node6}" description="" skinid="ht_node"/>
+      <hotspot target="" title="На 1 этаж" id="На 1 этаж" tilt="0.09" pan="-176.4" url="{node3}" description="" skinid="ht_node"/>
+      <hotspot target="" title="Ауд.403" id="Point01" tilt="-0.18" pan="159.09" url="{node9}" description="" skinid="ht_node"/>
+      <hotspot target="" title="Ауд.401" id="Point02" tilt="-2.46" pan="41.69" url="{node10}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node9">
+    <input levelingpitch="0" leveltileurl="tiles/360_0038[1]_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-0.4" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="-12.49" pan="59.35" fov="90.7903"/>
+      <min tilt="-85" pan="-214.5" fov="5"/>
+      <max tilt="90" pan="360" fov="100"/>
+    </view>
+    <userdata longitude="" latitude="" title="Ауд.403" comment="" info="" copyright="" tags="Pano2VR5" author="" datetime="2018:12:08 12:28:21" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="Холл 4 этажа" id="Point01" tilt="-3.06" pan="126.6" url="{node8}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node10">
+    <input levelingpitch="-0.7" leveltileurl="tiles/360_0039[1]_Stitch_XHC/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1944" overlap="1" levelingroll="-4.5" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" height="1944">
+      <level predecode="0" width="1944" preload="0" height="1944"/>
+      <level predecode="0" width="972" preload="0" height="972"/>
+      <level predecode="1" width="486" preload="1" height="486"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="1">
+      <start tilt="-4.04" pan="80.66" fov="96.4183"/>
+      <min tilt="-90" pan="-337.9" fov="5"/>
+      <max tilt="90" pan="360" fov="100"/>
+    </view>
+    <userdata longitude="" latitude="" title="Ауд.401" comment="" info="" copyright="" tags="Pano2VR5" author="" datetime="2018:12:08 12:27:20" description="" source=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label enabled="1" width="180" backgroundalpha="1" bordercolor="0x000000" border="1" borderradius="1" textcolor="0x000000" textalpha="1" backgroundcolor="0xffffff" borderalpha="1" wordwrap="1" height="20" background="1"/>
+      <polystyle handcursor="1" backgroundalpha="0.2509803921568627" bordercolor="0x0000ff" mode="0" backgroundcolor="0x0000ff" borderalpha="1"/>
+      <hotspot target="" title="Холл 4 этажа" id="Point01" tilt="3.85" pan="-133.07" url="{node8}" description="" skinid="ht_node"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" enabled="0" zoomoutpause="1" type="crossdissolve" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2" zoomout="0"/>
+    <control lockedwheel="0" speedwheel="1" hideabout="0" lockedkeyboardzoom="0" lockedkeyboard="0" invertwheel="0" dblclickfullscreen="0" invertcontrol="1" sensitivity="8" contextfullscreen="0" simulatemass="1" lockedmouse="0"/>
+  </panorama>
+</tour>

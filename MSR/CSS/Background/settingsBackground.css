@@ -1,0 +1,118 @@
+.wrapper {
+    margin-top: 0!important;
+    position: relative;
+    margin: 0px;
+    z-index: 99;
+}
+
+.content {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: calc(100vh - 67px);
+}
+
+.backwrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 67px;
+    z-index: 1;
+}
+
+.epic-icon {
+    font-size: 210%!important;
+    opacity: 0.5;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    transition: 0.3s all;
+}
+
+.back-shapes {
+    width: 100%;
+    height: calc(100vh - 67px);
+    position: relative;
+    overflow: hidden;
+}
+
+.back-shapes em {
+    opacity: 1;
+    position: absolute;
+    width: 2%;
+    font-size: 240%!important;
+    color: #000;
+}
+
+@media screen and (max-width: 1400px) {
+    .back-shapes img {
+        width: 3%;
+    }
+    .back-shapes em {
+        font-size: 260%!important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .back-shapes img {
+        width: 4%;
+    }
+    .back-shapes em {
+        font-size: 230%!important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .back-shapes img {
+        width: 5%;
+    }
+    .back-shapes em {
+        font-size: 180%!important;
+    }
+}
+
+.floating {
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0%) rotate(-55deg);
+    }
+    50% {
+        transform: translateY(300%) rotate(55deg);
+    }
+    100% {
+        transform: translateY(0%) rotate(-55deg);
+    }
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(300%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes floating {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(300%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
